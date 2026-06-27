@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تولدت مبارک خوشگل‌ترین آدم دنیا 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-hearts"></div>
+  <div class="balloons"></div>
+  <canvas id="confettiCanvas"></canvas>
+
+  <header class="hero">
+    <div class="hero-card">
+      <div class="mini-badge">Happy Birthday Princess ✨</div>
+      <h1>تولدت مبارک <span id="recipientName">عزیزترینم</span> 🎉</h1>
+      <p class="hero-text">
+        امروز دنیا قشنگ‌تره، چون روز توئه...  
+        و من خواستم یه گوشه‌ی کوچیک از حس قشنگم رو برات تبدیل کنم به یه سورپرایز صورتی و دوست‌داشتنی 💖
+      </p>
+
+      <div class="hero-actions">
+        <button id="musicBtn" class="btn primary">پخش آهنگ 🎶</button>
+        <button id="openLetterBtn" class="btn secondary">باز کردن نامه 💌</button>
+      </div>
+
+      <div class="cake-box">
+        <div class="cake">
+          <div class="candles">
+            <span class="candle"><i></i></span>
+            <span class="candle"><i></i></span>
+            <span class="candle"><i></i></span>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="glass-card reveal">
+      <h2>یه پیام کوچولو برای تو 💗</h2>
+      <p id="typedText"></p>
+    </section>
+
+    <section class="glass-card reveal">
+      <h2>چرا انقدر خاصی؟ 🌷</h2>
+      <div class="reasons">
+        <div class="reason">لبخندت از نصف دنیا قشنگ‌تره 😌</div>
+        <div class="reason">حرص خوردن پیشت می ارزه به خوشحال بودن کنار خیلیااااا ✨</div>
+        <div class="reason">مهربونی‌ات رو ک دیگه نگممم 💕</div>
+        <div class="reason">با تو حتی سکوت هم قشنگه 🌙</div>
+        <div class="reason">تو از آن فرشته هستی که تکرار نمی‌شن 🎀</div>
+      </div>
+    </section>
+
+    <section class="glass-card reveal">
+      <h2>یه دوربین خریدم باهاش از ماه عکس انداختم خواستم شما هم ببینیش 📸</h2>
+      <div class="gallery">
+        <img src="assets/1.jpg" alt="memory 1" />
+        <img src="assets/2.jpg" alt="memory 2" />
+        <img src="assets/3.jpg" alt="memory 3" />
+      </div>
+    </section>
+
+    <section class="glass-card reveal surprise-box">
+      <h2>یه سورپرایز دیگه 🎁</h2>
+      <p>روی دکمه زیر بزن تا یک عالمه شادی بریزه رو سرت 😌</p>
+      <button id="confettiBtn" class="btn primary">لیلیلیلیلیلیلیلیللیی 🎊</button>
+    </section>
+
+    <section class="glass-card reveal final-love">
+      <h2>آخرش فقط اینو بدون ❤️</h2>
+      <p>
+        تو برای من خیلی عزیزی.  
+        امیدوارم همیشه دلت سبک، قلبت آروم، خنده‌هات بلند و روزهات روشن باشه.  
+        تولدت مبارک قشنگ‌ترین اتفاق دنیا 🌹
+      </p>
+    </section>
+
+    <section class="gift-zone reveal" id="giftZone">
+      <div class="gift-spacer"></div>
+      <h2>تهِ تهِ صفحه یه چیز کوچولو منتظرته... 🎀</h2>
+      <p class="gift-sub"> اماده ای خوشگله!؟؟!!؟؟</p>
+
+      <div id="giftAvailable" class="gift-envelope">
+        <div class="envelope" id="giftEnvelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body"></div>
+          <div class="letter-sheet">
+            <h3>برای تو 💌</h3>
+            <p id="giftMessage"></p>
+          </div>
+        </div>
+        <button id="takeGiftBtn" class="btn primary">برداشتن نامه 🎁</button>
+      </div>
+
+      <div id="giftTakenBox" class="taken-box hidden">
+        <p>این هدیه قبلاً برداشته شده 🎀</p>
+      </div>
+    </section>
+
+    <section class="lily-section reveal">
+  <div class="lily-wrap">
+    <img src="assets/lily.png" alt="Lily" class="lily-image">
+    <h2>و اینم یه لیلیوم برای تو (از تو چنل خودت برداشتمش ببخشید نبود)</h2>
+    <p>
+      دیگه متن قشنگ به ذهنم نیمد برو عشق کنننن❤️
+    </p>
+  </div>
+</section>
+
+  </main>
+
+  <div class="modal hidden" id="letterModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="close-btn" id="closeModalBtn">×</button>
+      <h2>نامه برای تو 💖</h2>
+      <p>
+        شاید نتونم همه‌ی چیزهایی که توی دلمه رو کامل بگم،  
+        ولی خواستم یه گوشه‌ی کوچیک ازش رو اینجا بذارم:  
+        تو خیلی خاصی، خیلی عزیز، و بودنت برای من یه حس قشنگه که هر روز بابتش خوشحال می‌شم.  
+        تولدت مبارک خوشگل‌ترین آدم دنیا 🌸
+      </p>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
